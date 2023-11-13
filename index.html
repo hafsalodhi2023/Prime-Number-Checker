@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    "
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="login-box">
+      <h2>CHECK THE NUMBER IS PRIME OR NOT</h2>
+      <form>
+        <div class="user-box">
+          <input type="number" id="value" name="" required="" />
+          <label>Number</label>
+         
+        <a onclick="check()" id="btn" href="#">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Check
+        </a>
+        <p id="result"></p>
+      </form>
+    </div>
+  </body>
+  <script>
+    function check(){var data = document.getElementById('value').value;
+    if(data == 1 ){
+        var result = document.getElementById('result').innerText = `RESULT : ${data} is neither Prime nor Composite Number.`;
+    }else if(data < 1){
+        var result = document.getElementById('result').innerText = `RESULT : ${data} is not a Prime Number.`;
+    }else{
+        for(var a = 2; a < data; a++){
+            if(data % a === 0){
+                var result = document.getElementById('result').innerText = `RESULT : ${data} is a not Prime Number.`;
+                break;
+            }else{ var result = document.getElementById('result').innerText = `RESULT : ${data} is a Prime Number.`;
+        }
+        }
+    }}
+  </script>
+</html>
